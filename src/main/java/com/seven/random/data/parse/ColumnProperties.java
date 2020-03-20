@@ -1,5 +1,7 @@
 package com.seven.random.data.parse;
 
+import java.util.List;
+
 /**
  * @author liucaiwen
  * @date 2020/3/16
@@ -24,16 +26,12 @@ public class ColumnProperties {
     /**
      * 字段长度
      */
-    private String columnLength;
+    private List<String> columnArgs;
     /**
      * 字段注释
      */
     private String columnComment;
 
-    /**
-     * 字段默认值
-     */
-    private String columnDefaultValue;
 
     public String getColumnName() {
         return columnName;
@@ -59,12 +57,12 @@ public class ColumnProperties {
         this.columnSqlType = columnSqlType;
     }
 
-    public String getColumnLength() {
-        return columnLength;
+    public List<String> getColumnArgs() {
+        return columnArgs;
     }
 
-    public void setColumnLength(String columnLength) {
-        this.columnLength = columnLength;
+    public void setColumnArgs(List<String> columnArgs) {
+        this.columnArgs = columnArgs;
     }
 
     public String getColumnComment() {
@@ -75,13 +73,6 @@ public class ColumnProperties {
         this.columnComment = columnComment;
     }
 
-    public String getColumnDefaultValue() {
-        return columnDefaultValue;
-    }
-
-    public void setColumnDefaultValue(String columnDefaultValue) {
-        this.columnDefaultValue = columnDefaultValue;
-    }
 
     @Override
     public String toString() {
@@ -89,9 +80,8 @@ public class ColumnProperties {
                 "columnName='" + columnName + '\'' +
                 ", columnJavaType='" + columnJavaType + '\'' +
                 ", columnSqlType='" + columnSqlType + '\'' +
-                ", columnLength='" + columnLength + '\'' +
+                ", columnArgs=" + columnArgs +
                 ", columnComment='" + columnComment + '\'' +
-                ", columnDefaultValue='" + columnDefaultValue + '\'' +
                 '}';
     }
 }
